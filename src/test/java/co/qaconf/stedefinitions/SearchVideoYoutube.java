@@ -17,7 +17,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClic
 public class SearchVideoYoutube {
 
     @Test
-    public void buscarVideoFutbolEnYoutube(){
+    public void searchSoccerVideo() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Juan").attemptsTo(
                 WaitUntil.the(SEARCH_BTN, isClickable()).forNoMoreThan(10).seconds(),
