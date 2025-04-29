@@ -12,4 +12,13 @@ public class HomePage {
 
     public static final Target SEARCH_VIDEOS_FIELD = the("Search videos field in Youtube")
             .located(AppiumBy.className("android.widget.EditText"));
+
+    public static final Target MENU_OPTIONS_ANDROID = the("General Options in Youtube").
+            locatedBy("//android.widget.TextView[@text='{0}']");
+
+    // Example of a target to android and IOs
+    public static final Target CAMPO_BUSCAR_VIDEOS = the("Campo para busqueda de videos")
+            .locatedForAndroid(AppiumBy.className("android.widget.EditText"))
+            .locatedForIOS(AppiumBy.className("XCUIElementTypeSearchField"));
+
 }

@@ -1,6 +1,10 @@
 package co.qaconf.stedefinitions;
 
+import co.qaconf.constants.MenuEnum;
+import co.qaconf.interactions.Open;
+import co.qaconf.interactions.OpenMenuOption;
 import co.qaconf.tasks.SearchVideo;
+import co.qaconf.utils.MobileHelper;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -23,6 +27,14 @@ public class SearchVideoYoutube {
                 WaitUntil.the(SEARCH_BTN, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(SEARCH_BTN),
                 SearchVideo.enYoutube()
+        );
+    }
+
+    @Test
+    public void openShorts() {
+        OnStage.setTheStage(new OnlineCast());
+        theActorCalled("Juan").attemptsTo(
+                Open.shorts()
         );
     }
 
