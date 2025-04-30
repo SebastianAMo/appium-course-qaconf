@@ -79,6 +79,7 @@ jobs:
             curl http://127.0.0.1:4723/status
 
             # Execute Gradle
+            chmod +x ./gradlew
             sed -i "s/\r//" ./gradlew
             echo "Ejecutando tests con Gradle..."
             ./gradlew clean test -Denvironment=moto72 aggregate reports
