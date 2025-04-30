@@ -83,7 +83,7 @@ jobs:
             curl http://127.0.0.1:4723/status
 
             # Ejecutar pruebas con Gradle
-            sed -i "s/\r//" mobile-appium-automation-serenitybdd/gradlew
+            sed -i "s/\r//" ./gradlew
             echo "Ejecutando tests con Gradle..."
             ./gradlew clean test -Denvironment=moto72 aggregate reports
 
