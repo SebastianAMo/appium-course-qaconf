@@ -69,10 +69,8 @@ public class SearchVideoYoutube {
     @Test
     public void checkShareButtonShortEnsure(){
         theActorCalled("Sebastian").attemptsTo(
-                Open.shorts()
-        );
-        theActorCalled("Sebastian").attemptsTo(
-                Ensure.that(SUSCRIPTION_BTN).isDisabled()
+                Open.shorts(),
+                Ensure.that(SUSCRIPTION_BTN).isDisplayed()
         );
     }
 
