@@ -57,7 +57,8 @@ jobs:
             adb wait-for-device
             adb devices
 
-            echo "Install UIAutomator2 driver"
+            # Instalar el driver de UIAutomator2 y validar dependencias con Appium Doctor
+            echo "Instalando el driver de UIAutomator2..."
             appium driver install uiautomator2
             echo "Install Appium Doctor"
             sudo npm install -g appium-doctor
